@@ -24,7 +24,11 @@ function render() {
       value={store.getState()}
       onIncrement={() => action('INCREMENT')}
       onDecrement={() => action('DECREMENT')}
-      onIncrementAsync={() => action('INCREMENT_ASYNC')}/>,
+      onIncrementLast={() => action('INCREMENT_LAST')}
+      onIncrementAsync={() =>{
+        action('INCREMENT_ASYNC')}
+      } 
+      onIncrementLeading={() => action('INCREMENT_LEADING')}/>,
     document.getElementById('root')
   )
 }
